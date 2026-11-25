@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOMZIK GAME 2 — Интерактивная метафора детства</title>
+  <meta name="description" content="Gomzik Game 2 — модернистский инди-проект и интерактивная метафора детства. Новые локации, сюрреалистичный сюжет, Gomzik Player и вечный поиск монитора." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Top Architectural Bar -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="#top" class="brand" aria-label="Gomzik Game 2 — Наверх">
+        <span class="brand-dot"></span>
+        <span class="brand-title">GOMZIK GAME <span class="accent-orange">2</span></span>
+        <span class="brand-tag">ALPHA 2 // 2026</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#manifesto">01. Метафора</a>
+        <a href="#archetypes">02. Пространство</a>
+        <a href="#player-section">03. Gomzik Player</a>
+        <a href="#minigame">04. Этюд</a>
+        <a href="#archive">05. Архив</a>
+        <a href="#creators">06. Авторы</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button id="themeToggle" class="theme-btn" type="button" title="Переключить режим: День / Тень Мамы" aria-label="Переключить тему">
+          <span class="theme-indicator"></span>
+          <span id="themeLabel">ДЕНЬ</span>
+        </button>
+        <a href="https://drive.google.com/file/d/1an5FdneGeS1Tll_D7Gf0jYlAYBzKWXNr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm">
+          Скачать Alpha 2 ↗
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="eyebrow-row">
+            <span class="mono-pill">ЭКСПОЗИЦИЯ № 02</span>
+            <span class="mono-muted">ИНДИ-СЮРРЕАЛИЗМ / ПЛАТФОРМЕР / СТЕЛС</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="serif-italic">Интерактивная</span><br />
+            МЕТАФОРА<br />
+            <span class="accent-orange">ДЕТСТВА</span>
+          </h1>
+
+          <p class="hero-lead">
+            Комната, которая когда-то казалась целой вселенной, стала тесной.
+            В <strong>Gomzik Game 2</strong> вы впервые выходите за порог — в лабиринт коридоров,
+            бытовых запретов, детских страхов и порталов собственного сознания.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="https://drive.google.com/file/d/1an5FdneGeS1Tll_D7Gf0jYlAYBzKWXNr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Скачать Alpha 2
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="#minigame" class="btn-outline">
+              Сыграть в веб-этюд
+            </a>
+            <a href="https://t.me/GomzikGame" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              Telegram @GomzikGame ↗
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-cell">
+              <span class="metric-val">02</span>
+              <span class="metric-lbl">Глава истории</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-val">03</span>
+              <span class="metric-lbl">Трека в плеере</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-val">∞</span>
+              <span class="metric-lbl">Детских страхов</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-val accent-crimson">0%</span>
+              <span class="metric-lbl">Пощады от Мамы</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="art-frame">
+            <div class="art-frame-header">
+              <span>FIG. 01 — ГЛАВНОЕ МЕНЮ</span>
+              <span class="status-live">● CO-OP: SOON</span>
+            </div>
+            <div class="art-frame-media">
+              <img src="assets/screen-menu.png" alt="Главное меню Гомзик Гейм 2" />
+            </div>
+            <div class="art-frame-footer">
+              <span>НАИВНЫЙ МОДЕРНИЗМ</span>
+              <span>ДВЕРЬ КАК ГРАНИЦА МИРА</span>
+            </div>
+          </div>
+
+          <div class="floating-note">
+            <span class="mono-xs">АНТАГОНИСТ</span>
+            <p>«Ваши главные враги — не монстры из фэнтези, а Мама и скрип половицы за закрытой дверью».</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kinetic Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>GOMZIK GAME 2</span>
+          <span>•</span>
+          <span>НАЙДИ МОНИТОР!</span>
+          <span>•</span>
+          <span>GOMZIK PLAYER</span>
+          <span>•</span>
+          <span>ЗАЛЕТАЮ В ЛОББИ!</span>
+          <span>•</span>
+          <span>ЧЁРНОЕ ОКНО</span>
+          <span>•</span>
+          <span>СЮРРЕАЛИЗМ ДЕТСТВА</span>
+          <span>•</span>
+          <span>GOMZIK GAME 2</span>
+          <span>•</span>
+          <span>НАЙДИ МОНИТОР!</span>
+          <span>•</span>
+          <span>GOMZIK PLAYER</span>
+          <span>•</span>
+          <span>ЗАЛЕТАЮ В ЛОББИ!</span>
+          <span>•</span>
+          <span>ЧЁРНОЕ ОКНО</span>
+          <span>•</span>
+          <span>СЮРРЕАЛИЗМ ДЕТСТВА</span>
+          <span>•</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01. MANIFESTO -->
+    <section id="manifesto" class="section border-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01 / МАНИФЕСТ</span>
+          <h2 class="section-title">Философия <span class="serif-italic">наивного</span> абсурда</h2>
+        </div>
+
+        <div class="manifesto-grid">
+          <blockquote class="manifesto-quote">
+            <span class="quote-mark">“</span>
+            Мир <em>Gomzik Game 2</em> живёт по законам детской логики:
+            тени на стене могут оказаться друзьями, обычный ужин — самым страшным испытанием дня,
+            а монитор на столе — единственным окном в свободу.
+            <cite>— Из концепт-документа игры</cite>
+          </blockquote>
+
+          <div class="manifesto-columns">
+            <p>
+              Вы играете за <strong>Гомзика</strong> — маленькое, уязвимое существо в белой футболке,
+              запертое внутри сюрреалистичной архитектуры собственной квартиры и воображения.
+              Здесь нет мечей, брони и магии: только смекалка, умение прятаться и тихий шаг.
+            </p>
+            <p>
+              Во второй части привычная оранжевая комната перестаёт быть пределом.
+              За её единственной коричневой дверью открываются коридоры, кухни, прыжки над пропастью
+              из шипов и абсурдные испытания. Игра говорит о взрослении одновременно смешно,
+              странно и пронзительно честно.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. ARCHETYPES / SPACE -->
+    <section id="archetypes" class="section border-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02 / АРХИТЕКТУРА СОЗНАНИЯ</span>
+          <h2 class="section-title">Четыре <span class="serif-italic">архетипа</span> мира</h2>
+        </div>
+
+        <div class="archetype-layout">
+          <div class="archetype-tabs" role="tablist" aria-label="Архетипы игры">
+            <button class="arch-tab active" data-arch="room" role="tab" aria-selected="true">
+              <span class="mono-xs">01</span>
+              <span class="arch-tab-title">Комната</span>
+              <span class="arch-tab-sub">Тёплый оранжевый кокон</span>
+            </button>
+            <button class="arch-tab" data-arch="pc" role="tab" aria-selected="false">
+              <span class="mono-xs">02</span>
+              <span class="arch-tab-title">Компьютер</span>
+              <span class="arch-tab-sub">Портал и Gomzik Player</span>
+            </button>
+            <button class="arch-tab" data-arch="outside" role="tab" aria-selected="false">
+              <span class="mono-xs">03</span>
+              <span class="arch-tab-title">Платформы сна</span>
+              <span class="arch-tab-sub">«Найди монитор!» (2/3)</span>
+            </button>
+            <button class="arch-tab" data-arch="mom" role="tab" aria-selected="false">
+              <span class="mono-xs">04</span>
+              <span class="arch-tab-title">Закон и Мама</span>
+              <span class="arch-tab-sub">Прятки и выживание</span>
+            </button>
+          </div>
+
+          <div class="archetype-stage">
+            <div class="arch-panel active" id="arch-room">
+              <div class="arch-media">
+                <img src="assets/screen-room.png" alt="Оранжевая комната Гомзика с дверью и компьютером" />
+              </div>
+              <div class="arch-info">
+                <span class="mono-pill">ЛОКАЦИЯ 01</span>
+                <h3>Оранжевая комната</h3>
+                <p>
+                  Точка отсчёта. Две горизонтальные линии на тёплой стене, коричневый пол,
+                  дверь слева и компьютерный стол справа. Пока дверь закрыта — вы в безопасности.
+                  Но стоит прислушаться, и тишина начинает звенеть.
+                </p>
+              </div>
+            </div>
+
+            <div class="arch-panel" id="arch-pc">
+              <div class="arch-media">
+                <img src="assets/screen-player.png" alt="Интерфейс Gomzik Player" />
+              </div>
+              <div class="arch-info">
+                <span class="mono-pill">АРТЕФАКТ 02</span>
+                <h3>Компьютер и Gomzik Player</h3>
+                <p>
+                  Системный блок с двумя красными диодами и экран, открывающий собственную ОС.
+                  Внутри — минималистичный аудиоплеер на кремовом фоне с рукописным логотипом
+                  и саундтреком от которого невозможно оторваться.
+                </p>
+              </div>
+            </div>
+
+            <div class="arch-panel" id="arch-outside">
+              <div class="arch-media">
+                <img src="assets/screen-platformer.png" alt="Уровень-платформер Найди монитор" />
+              </div>
+              <div class="arch-info">
+                <span class="mono-pill">ЛОКАЦИЯ 03</span>
+                <h3>Небо, шипы и ключи</h3>
+                <p>
+                  Когда быт превращается в платформер: парящие острова с травой,
+                  бесконечный ряд серых шипов внизу, жёлтый ключ на узком уступе
+                  и счётчик <strong>2/3</strong> в углу экрана. Цель одна — <em>«Найди монитор!»</em>.
+                </p>
+              </div>
+            </div>
+
+            <div class="arch-panel" id="arch-mom">
+              <div class="arch-media">
+                <img src="assets/screenshot-5.png" alt="Гомзик и взрослые" />
+              </div>
+              <div class="arch-info">
+                <span class="mono-pill">МЕХАНИКА 04</span>
+                <h3>Мир глазами ребёнка</h3>
+                <p>
+                  Странные взрослые, загадочные соседи и Мама как абсолютный закон пространства.
+                  Чтобы выжить, нужно читать ритм шагов, прятаться и превращать детский рисунок
+                  в тактическую карту.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. INTERACTIVE GOMZIK PLAYER -->
+    <section id="player-section" class="section border-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03 / ЗВУКОВАЯ СРЕДА</span>
+          <h2 class="section-title">Интерактивный <span class="accent-crimson">GOMZIK PLAYER</span></h2>
+        </div>
+
+        <div class="player-window">
+          <div class="player-titlebar">
+            <div class="player-brand">
+              <span class="handwritten-black">GOMZIK</span>
+              <span class="handwritten-red">PLAYER</span>
+            </div>
+            <div class="player-win-controls">
+              <div class="vol-wrap">
+                <span aria-hidden="true">🔊</span>
+                <input id="playerVolume" type="range" min="0" max="100" value="70" aria-label="Громкость плеера" />
+              </div>
+              <span class="win-btn" aria-hidden="true">—</span>
+              <span class="win-btn win-close" aria-hidden="true">✕</span>
+            </div>
+          </div>
+
+          <div class="player-body">
+            <aside class="player-sidebar">
+              <div class="player-sidebar-title">Music:</div>
+              <ul class="track-list" id="trackList">
+                <li class="track-item active" data-index="0">
+                  <div class="track-thumb thumb-1">01</div>
+                  <div class="track-meta">
+                    <span class="track-name">Залетаю в лобби!</span>
+                    <span class="track-dur">0:27</span>
+                  </div>
+                </li>
+                <li class="track-item" data-index="1">
+                  <div class="track-thumb thumb-2">02</div>
+                  <div class="track-meta">
+                    <span class="track-name">Чёрное окно</span>
+                    <span class="track-dur">0:25</span>
+                  </div>
+                </li>
+                <li class="track-item" data-index="2">
+                  <div class="track-thumb thumb-3">03</div>
+                  <div class="track-meta">
+                    <span class="track-name">gomzik do 5 (remix)</span>
+                    <span class="track-dur">3:14</span>
+                  </div>
+                </li>
+              </ul>
+              <p class="player-hint">
+                * Все 3 трека воспроизводятся с оригинальных аудиозаписей игры.
+              </p>
+            </aside>
+
+            <div class="player-stage">
+              <canvas id="visualizerCanvas" width="520" height="140" aria-label="Аудио-визуализатор"></canvas>
+              <div class="now-playing">
+                <div id="nowPlayingTitle" class="now-playing-title">Залетаю в лобби!</div>
+                <div id="nowPlayingTime" class="now-playing-time">00:00:00</div>
+              </div>
+              <div class="player-controls">
+                <button id="prevTrackBtn" class="ctrl-circle" type="button" aria-label="Предыдущий трек">⏮</button>
+                <button id="playPauseBtn" class="ctrl-circle ctrl-play" type="button" aria-label="Воспроизвести или пауза">▶</button>
+                <button id="nextTrackBtn" class="ctrl-circle" type="button" aria-label="Следующий трек">⏭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04. PLAYABLE MINI-GAME -->
+    <section id="minigame" class="section border-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04 / ИГРАБЕЛЬНЫЙ ЭТЮД</span>
+          <h2 class="section-title">Найди <span class="accent-orange">монитор!</span></h2>
+          <p class="section-sub">
+            Браузерная мини-версия уровня из Gomzik Game 2: соберите все 3 ключа, перепрыгивайте шипы и доберитесь до монитора.
+          </p>
+        </div>
+
+        <div class="game-shell">
+          <div class="game-hud-bar">
+            <div class="hud-left">
+              <span class="mono-pill">ЗАДАНИЕ: НАЙДИ МОНИТОР!</span>
+              <span id="gameStatusText" class="hud-status">Управление: ← → / A D и Пробел (прыжок)</span>
+            </div>
+            <div class="hud-right">
+              <span id="keyCounter" class="key-counter">0/3</span>
+              <button id="restartGameBtn" class="btn-outline btn-sm" type="button">Заново ↻</button>
+            </div>
+          </div>
+
+          <canvas id="gomzikCanvas" width="960" height="420" tabindex="0" aria-label="Мини-игра Найди монитор"></canvas>
+
+          <div class="touch-controls" aria-label="Сенсорное управление">
+            <div class="touch-dir">
+              <button type="button" class="touch-btn" id="btnLeft">◀</button>
+              <button type="button" class="touch-btn" id="btnRight">▶</button>
+            </div>
+            <button type="button" class="touch-btn touch-jump" id="btnJump">ПРЫЖОК ▲</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. ARCHIVE / GALLERY -->
+    <section id="archive" class="section border-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">05 / ВИЗУАЛЬНЫЙ АРХИВ</span>
+          <h2 class="section-title">Кадры из <span class="serif-italic">реальности</span> и снов</h2>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Фильтр скриншотов">
+          <button class="filter-btn active" data-filter="all" type="button">Все (7)</button>
+          <button class="filter-btn" data-filter="ui" type="button">Интерфейс</button>
+          <button class="filter-btn" data-filter="location" type="button">Локации</button>
+          <button class="filter-btn" data-filter="character" type="button">Персонажи</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <figure class="gallery-card wide" data-category="ui" data-src="assets/screen-menu.png" data-caption="Главное меню: дверь, кнопка «НАЧАТЬ», тизер CO-OP и регулятор звука.">
+            <img src="assets/screen-menu.png" alt="Главное меню Гомзик Гейм 2" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">UI // 01</span>
+              <strong>Главное меню «Гомзик Гейм 2»</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="location" data-src="assets/screen-room.png" data-caption="Комната Гомзика: оранжевые стены, дверь слева и компьютерный стол.">
+            <img src="assets/screen-room.png" alt="Комната Гомзика" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">LOC // 02</span>
+              <strong>Комната и компьютерный стол</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="ui" data-src="assets/screen-player.png" data-caption="Встроенный проигрыватель GOMZIK PLAYER с треками сообщества.">
+            <img src="assets/screen-player.png" alt="Gomzik Player" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">UI // 03</span>
+              <strong>Gomzik Player</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card wide" data-category="location" data-src="assets/screen-platformer.png" data-caption="Уровень «Найди монитор!»: парящие платформы, шипы и поиск ключей (2/3).">
+            <img src="assets/screen-platformer.png" alt="Платформер Найди монитор" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">GAMEPLAY // 04</span>
+              <strong>Платформер: «Найди монитор!»</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="character" data-src="assets/screenshot-5.png" data-caption="Гомзик и взрослые — столкновение масштабов и правил.">
+            <img src="assets/screenshot-5.png" alt="Гомзик и взрослые" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">CHAR // 05</span>
+              <strong>Гомзик и взрослые</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="character" data-src="assets/screenshot-4.png" data-caption="Портрет главного героя — Гомзика.">
+            <img src="assets/screenshot-4.png" alt="Гомзик" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">CHAR // 06</span>
+              <strong>Главный герой</strong>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card" data-category="location" data-src="assets/gomzik-room.png" data-caption="Ранний пиксельный эскиз комнаты Гомзика.">
+            <img src="assets/gomzik-room.png" alt="Эскиз комнаты Гомзика" loading="lazy" />
+            <figcaption>
+              <span class="mono-xs">ARCHIVE // 07</span>
+              <strong>Архивный эскиз комнаты</strong>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. CREATORS -->
+    <section id="creators" class="section border-top">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">06 / КОМАНДА ПРОЕКТА</span>
+          <h2 class="section-title">Люди за <span class="serif-italic">дверью</span></h2>
+        </div>
+
+        <div class="creators-grid">
+          <a href="https://steamcommunity.com/profiles/76561199302144140" target="_blank" rel="noopener noreferrer" class="creator-card">
+            <div class="creator-top">
+              <img src="assets/developer.jpg" alt="Создатель" class="creator-avatar" />
+              <div>
+                <span class="mono-pill">CODE &amp; DESIGN</span>
+                <h3>Создатель</h3>
+                <p class="creator-role">Главный Разработчик</p>
+              </div>
+            </div>
+            <p class="creator-bio">
+              Отвечает за код, сюрреалистичный дизайн уровней, визуальный язык и игровую логику мира Гомзика.
+            </p>
+            <span class="creator-link">Профиль Steam ↗</span>
+          </a>
+
+          <a href="https://steamcommunity.com/profiles/76561199826849331" target="_blank" rel="noopener noreferrer" class="creator-card">
+            <div class="creator-top">
+              <img src="assets/admin-napoleon.jpg" alt="Администратор" class="creator-avatar" />
+              <div>
+                <span class="mono-pill pill-blue">COMMUNITY</span>
+                <h3>Администратор</h3>
+                <p class="creator-role">Комьюнити Менеджер</p>
+              </div>
+            </div>
+            <p class="creator-bio">
+              Поддерживает связь с игроками, ведёт Telegram-канал и координирует сообщество вокруг игры.
+            </p>
+            <span class="creator-link">Профиль Steam ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-banner border-top">
+      <div class="container cta-inner">
+        <div>
+          <span class="mono-pill">РЕЛИЗ // ALPHA 2</span>
+          <h2 class="cta-title">Готов встретиться с <span class="accent-orange">Мамой?</span></h2>
+          <p class="cta-sub">Скачайте актуальную сборку или присоединяйтесь к каналу разработки в Telegram.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="https://drive.google.com/file/d/1an5FdneGeS1Tll_D7Gf0jYlAYBzKWXNr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Скачать Alpha 2 ↗
+          </a>
+          <a href="https://t.me/GomzikGame" target="_blank" rel="noopener noreferrer" class="btn-outline">
+            Telegram @GomzikGame
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer border-top">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="brand-title">GOMZIK GAME <span class="accent-orange">2</span></span>
+        <span class="mono-muted">© 2026 Все права защищены.</span>
+      </div>
+      <div class="footer-right">
+        <a href="#top">Наверх ↑</a>
+        <a href="https://t.me/GomzikGame" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://drive.google.com/file/d/1an5FdneGeS1Tll_D7Gf0jYlAYBzKWXNr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" hidden aria-modal="true" role="dialog" aria-label="Просмотр изображения">
+    <button id="lbClose" class="lb-close" type="button" aria-label="Закрыть">✕</button>
+    <button id="lbPrev" class="lb-nav lb-prev" type="button" aria-label="Предыдущий кадр">‹</button>
+    <div class="lb-content">
+      <img id="lbImg" src="" alt="" />
+      <p id="lbCaption"></p>
+    </div>
+    <button id="lbNext" class="lb-nav lb-next" type="button" aria-label="Следующий кадр">›</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
